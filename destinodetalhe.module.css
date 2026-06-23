@@ -1,0 +1,247 @@
+/* ── Hero ───────────────────────────────────── */
+.hero {
+  position: relative;
+  height: 65vh;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2) 0%,
+    rgba(0,0,0,0.7) 100%
+  );
+}
+
+.heroContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+  width: fit-content;
+}
+
+.back:hover { color: #fff; }
+
+.continenteBadge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+  margin-bottom: 0.75rem;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.heroPais {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.65);
+  font-weight: 500;
+}
+
+.accentBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+/* ── Content ─────────────────────────────────── */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 5rem;
+}
+
+.contentInner {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.tagline {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--gold);
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin-bottom: 1.75rem;
+}
+
+.sectionLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+.descricao {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+}
+
+.destaqueList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.destaqueItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.destaqueMarker {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Sidebar ─────────────────────────────────── */
+.sidebar {
+  position: sticky;
+  top: 80px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.sidebarTitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.25rem;
+}
+
+.infoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.infoCard {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.65rem;
+  align-items: center;
+}
+
+.infoIcon {
+  grid-row: span 2;
+  font-size: 1.1rem;
+  align-self: center;
+}
+
+.infoLabel {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.infoValue {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ── Back bottom ─────────────────────────────── */
+.backBottom {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gold);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+
+.backBtn:hover {
+  border-bottom-color: var(--gold);
+}
+
+@media (max-width: 900px) {
+  .contentInner { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+}
+
+@media (max-width: 600px) {
+  .heroContent { padding: 1.5rem; }
+  .content { padding: 2.5rem 1.25rem 4rem; }
+}
